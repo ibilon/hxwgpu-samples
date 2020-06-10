@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build all",
+			"type": "process",
+			"command": "haxe",
+			"args": [
+				"build_all.hxml"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe",
+				"$haxe-error",
+				"$haxe-trace"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Run hello_triangle",
+			"command": "./build/hello_triangle/Main-debug",
+			"args": [],
+			"problemMatcher": [],
+			"dependsOn": "Build all"
+		}
+	]
+}

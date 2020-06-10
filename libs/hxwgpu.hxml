@@ -1,0 +1,3 @@
+-D wgpu
+--class-path libs/hxwgpu
+libs/hxwgpu/extraParams.hxml

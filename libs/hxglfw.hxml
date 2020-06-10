@@ -1,0 +1,3 @@
+-D glfw
+--class-path libs/hxglfw
+libs/hxglfw/extraParams.hxml

@@ -1,0 +1,8 @@
+libs/hxglfw.hxml
+libs/hxwgpu.hxml
+--debug
+
+--each
+
+--main hello_triangle.Main
+--cpp build/hello_triangle/

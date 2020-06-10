@@ -1,0 +1,6 @@
+[submodule "libs/hxglfw"]
+	path = libs/hxglfw
+	url = https://github.com/ibilon/hxglfw.git
+[submodule "libs/hxwgpu"]
+	path = libs/hxwgpu
+	url = https://github.com/ibilon/hxwgpu.git
