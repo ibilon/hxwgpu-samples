@@ -12,6 +12,14 @@ jobs:
       with:
         submodules: recursive
 
+    - name: Setup rust
+      uses: hecrj/setup-rust-action@v1
+      with:
+        rust-version: stable
+
+    - name: Setup GLFW dependencies
+      run: sudo apt install xorg-dev --yes
+
     - name: Setup haxe
       uses: haxeui/haxeui-core/.github/actions/haxe@master
       with:
