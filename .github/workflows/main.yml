@@ -29,4 +29,6 @@ jobs:
       run: haxelib install hxcpp
 
     - name: Test samples
-      run: haxe build_all.hxml
+      run: |
+        haxe cppia_host.hxml
+        haxe build_all.hxml

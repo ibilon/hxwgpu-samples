@@ -2,7 +2,25 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Build all",
+			"label": "Build cppia host",
+			"type": "process",
+			"command": "haxe",
+			"args": [
+				"cppia_host.hxml"
+			],
+			"problemMatcher": [
+				"$haxe-absolute",
+				"$haxe",
+				"$haxe-error",
+				"$haxe-trace"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"label": "Build samples",
 			"type": "process",
 			"command": "haxe",
 			"args": [
@@ -21,10 +39,12 @@
 		},
 		{
 			"label": "Run hello_triangle",
-			"command": "./build/hello_triangle/Main-debug",
-			"args": [],
+			"command": "build/cppia_host/CppiaHost-debug",
+			"args": [
+				"build/hello_triangle.cppia"
+			],
 			"problemMatcher": [],
-			"dependsOn": "Build all"
+			"dependsOn": "Build samples"
 		}
 	]
 }

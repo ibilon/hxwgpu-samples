@@ -1,8 +1,9 @@
 libs/hxglfw.hxml
 libs/hxwgpu.hxml
 --debug
+-D dll_import=build/export_classes.info
 
 --each
 
 --main hello_triangle.Main
---cpp build/hello_triangle/
+--cppia build/hello_triangle.cppia

@@ -1,0 +1,10 @@
+libs/hxglfw.hxml
+libs/hxwgpu.hxml
+--macro include("glfw")
+--macro include("wgpu")
+--main CppiaHost
+--dce no
+--debug
+--cpp build/cppia_host
+-D scriptable
+-D dll_export=build/export_classes.info
