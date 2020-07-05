@@ -1,4 +1,5 @@
 libs/hxglfw.hxml
+libs/hxshaderc.hxml
 libs/hxwgpu.hxml
 --debug
 -D dll_import=build/export_classes.info

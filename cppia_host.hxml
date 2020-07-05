@@ -1,6 +1,8 @@
 libs/hxglfw.hxml
+libs/hxshaderc.hxml
 libs/hxwgpu.hxml
 --macro include("glfw")
+--macro include("shaderc")
 --macro include("wgpu")
 --main CppiaHost
 --dce no

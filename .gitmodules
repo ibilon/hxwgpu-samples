@@ -4,3 +4,6 @@
 [submodule "libs/hxwgpu"]
 	path = libs/hxwgpu
 	url = https://github.com/ibilon/hxwgpu.git
+[submodule "libs/hxshaderc"]
+	path = libs/hxshaderc
+	url = https://github.com/ibilon/hxshaderc.git

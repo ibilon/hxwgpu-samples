@@ -1,0 +1,3 @@
+-D shaderc
+--class-path libs/hxshaderc
+libs/hxshaderc/extraParams.hxml

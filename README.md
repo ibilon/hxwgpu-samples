@@ -10,8 +10,9 @@ Make sure to clone this repository with `--recursive`, or download the submodule
 
 Requirements:
 
-* `hxwgpu` <https://github.com/ibilon/hxwgpu#building>
 * `hwglfw` <https://github.com/ibilon/hxglfw#building>
+* `hxshaderc` <https://github.com/ibilon/hxshaderc#building>
+* `hxwgpu` <https://github.com/ibilon/hxwgpu#building>
 
 To build:
 
@@ -21,11 +22,6 @@ To build:
 To run the samples:
 
 * `hello_triangle`: `./build/cppia_host/CppiaHost-debug build/hello_triangle.cppia`
-
-If you update the shaders you can recompile them with:
-
-* `glslangValidator -V -S frag -o hello_triangle/triangle.frag.spv hello_triangle/triangle.frag.glsl`
-* `glslangValidator -V -S vert -o hello_triangle/triangle.vert.spv hello_triangle/triangle.vert.glsl`
 
 # License
 

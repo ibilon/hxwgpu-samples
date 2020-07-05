@@ -1,6 +1,8 @@
 package hello_triangle;
 
 import glfw.GLFW;
+import shaderc.Compiler;
+import sys.io.File;
 import wgpu.*;
 
 class Main {
@@ -53,8 +55,16 @@ class Main {
 
 		final vertexBuffer = device.createBufferWithFloat32Data(vertices, Vertex);
 
-		final vertexShader = device.createShaderModuleFromFile("hello_triangle/triangle.vert.spv");
-		final fragmentShader = device.createShaderModuleFromFile("hello_triangle/triangle.frag.spv");
+		// Note: Use device.createShaderModuleFromFile(path) to load a precompiled spir-v shader module instead of compiling the shader at runtime.
+		final compiler = new Compiler();
+
+		final vertexShaderPath = "hello_triangle/triangle.vert.glsl";
+		final vertexShader = device.createShaderModule(compiler.compile(File.getContent(vertexShaderPath), Vertex, vertexShaderPath, "main").data);
+
+		final fragmentShaderPath = "hello_triangle/triangle.frag.glsl";
+		final fragmentShader = device.createShaderModule(compiler.compile(File.getContent(fragmentShaderPath), Fragment, fragmentShaderPath, "main").data);
+
+		compiler.release();
 
 		final renderPipelineLayout = device.createPipelineLayout({
 			bindGroupLayouts: [],
